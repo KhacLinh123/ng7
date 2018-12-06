@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    alert(this.formLoginControl.username.value);
+    this.router.navigate(['home']);
 
   }
 }

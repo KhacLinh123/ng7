@@ -1,10 +1,23 @@
-<h1 [ngClass]="{
-    'gray': h1Style,
-    'large': !h1Style
-  }">Home</h1>
-  <ul *ngIf="users">
-    <li *ngFor="let user of users.data">
-      <img [src]="user.avatar">
-      <p>{{ user.first_name }} {{ user.last_name }}</p>
-    </li>
-  </ul>
+<div class="example-container">
+  <h2 style="color:white">To do</h2>
+  <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of todo" cdkDrag (CdkDragEnd)="drop($event)">{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2 style="color:white">Done</h2>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box"></div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2 style="color:white">Properties</h2>
+  <div>
+    <input [(ngModel)]="username">
+
+    <p>Hello {{username}}!</p>
+
+  </div>
+</div>
