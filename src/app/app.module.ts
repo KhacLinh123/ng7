@@ -13,7 +13,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
-import { MakeDomBetterDirective } from './make-dom-better.directive';
+import { DynamicComponent } from './dynamic/dynamic.component';
+import { MenuComponent } from './menu/menu.component';
+import { DynamicTextBoxComponent } from './dynamic/dynamic-text-box';
+import { HandleEventDynamicDirective } from './directive/handle-event-dynamic.directive';
+import { DynamicTextBoxPropertyComponent } from './dynamic/dynamic-text-box-property';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { MakeDomBetterDirective } from './make-dom-better.directive';
     ContactComponent,
     LoginComponent,
     HomeComponent,
-    MakeDomBetterDirective
+    DynamicComponent,
+    MenuComponent,
+    DynamicTextBoxComponent,
+    DynamicTextBoxPropertyComponent,
+    HandleEventDynamicDirective
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,7 @@ import { MakeDomBetterDirective } from './make-dom-better.directive';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DynamicComponent, DynamicTextBoxComponent, DynamicTextBoxPropertyComponent]
 })
 export class AppModule { }

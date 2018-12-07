@@ -8,16 +8,12 @@
 <div class="example-container">
   <h2 style="color:white">Done</h2>
   <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <ng-container #dynamic></ng-container>
     <div class="example-box"></div>
   </div>
 </div>
 
 <div class="example-container">
   <h2 style="color:white">Properties</h2>
-  <div>
-    <input [(ngModel)]="username">
-
-    <p>Hello {{username}}!</p>
-
-  </div>
+  <ng-container #dynamicproperty></ng-container>
 </div>
