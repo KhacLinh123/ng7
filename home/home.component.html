@@ -1,0 +1,19 @@
+<div class="example-container">
+  <h2 style="color:white">To do</h2>
+  <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of todo" cdkDrag (CdkDragEnd)="drop($event)">{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2 style="color:white">Done</h2>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <ng-container #dynamic></ng-container>
+    <div class="example-box"></div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2 style="color:white">Properties</h2>
+  <ng-container #dynamicproperty></ng-container>
+</div>
